@@ -14,7 +14,7 @@ import os
 import sys
 
 from helper_code import *
-from team_code import load_model, run_model
+from physionet.team_code import load_model, run_model
 
 # Parse arguments.
 def get_parser():

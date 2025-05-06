@@ -13,7 +13,7 @@ import argparse
 import sys
 
 from helper_code import *
-from team_code import train_model
+from physionet.team_code import train_model
 
 # Parse arguments.
 def get_parser():
