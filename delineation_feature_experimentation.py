@@ -330,8 +330,8 @@ if __name__ == "__main__":
     """
 
     # Standard Initialization
-    data_path = 'neurokit_delineation/output/DBN_ecg_all_features.csv'
-    wfdb_path = '/Users/evanzimm/GitHub/python-example-2025/dbn_dataset'
+    data_path = 'NeurokitDelineation/output/DBN_ecg_all_features.csv'
+    wfdb_path = 'dbn_dataset'
     dbn_data = DBN_delineation_dataset(data_path, wfdb_path)
     dbn_data.cols_to_numpy()
 
@@ -369,6 +369,7 @@ if __name__ == "__main__":
     
     dbn = dbn_model(dbn_data.static_vars, dbn_data.dynamic_vars)
 
+    df_train = df_train.fillna(0) # How could something even be NAN?
     dbn.fit_dbn(df_train)
 
     acutal, predicted = dbn.inference(df_test)

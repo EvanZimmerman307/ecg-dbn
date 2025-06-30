@@ -1,6 +1,10 @@
 # ECG-based Chagas Disease Prediction using Dynamic Bayesian Networks
 
-This repository contains code and resources for predicting Chagas disease from electrocardiogram (ECG) data using Dynamic Bayesian Networks (DBNs). The primary objective is to leverage temporal dependencies within the wave features of ECG signals to accurately detect the presence of Chagas disease, a chronic condition that significantly impacts cardiac health.
+This repository contains code and resources for predicting Chagas disease from electrocardiogram (ECG) data using Dynamic Bayesian Networks (DBNs). DBNs are used to model the relationship between the timing of ECG wave features and the likelihood of Chagas disease.
+
+## Dataset
+
+See [Detection of Chagas Disease from the ECG: The George B. Moody PhysioNet Challenge 2025](https://moody-challenge.physionet.org/2025/) for formulating your own dataset. 
 
 ## Project Structure
 
@@ -36,8 +40,8 @@ See **NeurokitDelineation/** to extract wave delineation data from 12-lead ecg d
 ```bash
 python delineation_feature_experimentation.py
 ```
-- requires csv file of wave delineation data
-- requires folder of ecg data in wfdb format
+- Requires csv file of wave delineation data (see ```NeurokitDelineation/main.py```)
+- Requires a folder with ecg data in wfdb format
 
 ## References
 
